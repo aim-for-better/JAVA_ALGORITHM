@@ -1,9 +1,11 @@
 package firstchapter;
 
+import java.util.Iterator;
+
 /**
  * Created by zzy on 18-9-14.
  */
-public class Queue<Item> {
+public class Queue<Item> implements Iterable {
     private Node first;
     private Node last;
 
@@ -39,6 +41,28 @@ public class Queue<Item> {
         return item;
     }
 
+    @Override
+    public Iterator iterator() {
+        return new QueueIterator();
+    }
+
+    public class QueueIterator implements Iterator<Item>{
+
+        private Node current=first;
+        @Override
+        public boolean hasNext() {
+            return current!=null;
+        }
+
+        @Override
+        public Item next() {
+
+            Item item=current.item;
+
+            current=current.next;
+            return item;
+        }
+    }
     private class Node{
         Item item;
         Node next;

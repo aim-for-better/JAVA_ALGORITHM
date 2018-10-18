@@ -1,6 +1,5 @@
 package com.company.fourthchapter;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +11,8 @@ public class Digraph {
     private final int V ;
     private int E;
     private List<Integer>[] adj;
-    public Digraph(int v) {
-        this.V = v;
+    public Digraph(int V) {
+        this.V = V;
         this.E=0;
         adj=(List<Integer>[])new List[V];
 
