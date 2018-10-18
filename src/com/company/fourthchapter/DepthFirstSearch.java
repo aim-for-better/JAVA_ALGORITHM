@@ -23,6 +23,9 @@ public class DepthFirstSearch {
             }
         }
     }
+
+
+
     public boolean marked(int w){
         return marked[w];
     }

@@ -9,7 +9,7 @@ public class Queue<Item> {
 
     private int N;
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return first==null;
     }
 
